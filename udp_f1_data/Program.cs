@@ -12,15 +12,15 @@ namespace udp_f1_data
 
         private static void StartListening()
         {
-            UdpClient udpClient = new UdpClient(listenPort);
-            IPEndPoint groupEp = new IPEndPoint(IPAddress.Any, listenPort);
+            var udpClient = new UdpClient(listenPort);
+            var ep = new IPEndPoint(IPAddress.Any, listenPort);
 
             try
             {
                 Console.WriteLine("waiting for data...");
                 while (true)
                 {
-                    byte[] bytes = udpClient.Receive(ref groupEp);
+                    byte[] bytes = udpClient.Receive(ref ep);
                     var pt = CodemastersToolkit.GetPacketType(bytes);
 
                     if (pt.ToString() == "CarTelemetry")
@@ -33,13 +33,13 @@ namespace udp_f1_data
                         //foreach (TelemetryPacket.CarTelemetryData ctd in tp.FieldTelemetryData)
                         //{
 
-                        Console.WriteLine(tp.FieldTelemetryData[playerIndex].SpeedKph.ToString());
+                        Console.WriteLine($"Speed: {tp.FieldTelemetryData[playerIndex].SpeedKph.ToString()}");
+                        Console.WriteLine($"Gear: {tp.FieldTelemetryData[playerIndex].Gear.ToString()}");
                         //}     
                     }
-                    
                 }
             }
-            catch(SocketException exception)
+            catch (SocketException exception)
             {
                 Console.WriteLine(exception);
             }
