@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32929.385
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "udp_f1_data", "udp_f1_data\udp_f1_data.csproj", "{1732D78B-5B9C-47F9-B889-D34181C07419}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1732D78B-5B9C-47F9-B889-D34181C07419}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1732D78B-5B9C-47F9-B889-D34181C07419}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1732D78B-5B9C-47F9-B889-D34181C07419}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1732D78B-5B9C-47F9-B889-D34181C07419}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {12CD1BEF-E29E-4372-AD70-6799F8F8EE64}
+	EndGlobalSection
+EndGlobal
